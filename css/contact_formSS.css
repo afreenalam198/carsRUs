@@ -1,0 +1,68 @@
+
+/*Contact form*/
+#contactForm {
+    width: 17.5rem;
+    position: fixed;
+    right: 14.2rem;
+    top: 4.6rem;
+}
+
+.contact-form-container {
+    max-width: 400px;
+    padding: 10px;
+    height: 210px;
+    border-radius: 4px;
+    background-color: white;
+    opacity: 0.9;
+}
+
+.contact-form-container h1 {
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 20px;
+    color: #32373B;
+    text-decoration: underline;
+}
+
+.contact-form-container p1 {
+    font-size: 16px;
+    color: #32373B;
+    
+}
+
+#closeContactLink {
+    float: right;
+    width: 8%;
+    height: 10%;
+    padding: 2px 2px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background-color: #32373B;
+    color: white;
+    opacity: 0.7;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+#closeContactLink:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+@media (max-width: 76.875em) {
+
+    .greeting {
+        display: none;
+    }
+
+    #contactForm {
+        position: relative;
+        right: 0;
+        top: 180px;
+        margin: auto;
+    }
+
+}

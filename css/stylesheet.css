@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100vh;
+    background: url("../img/bg.jpg") no-repeat center;
+    background-size: cover;
+    background-position: top;
+    font-family: 'Roboto Slab', serif;
+    overflow-y: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    background-color: #495057;
+    opacity: 0.8; 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#banner {
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 0 1.5rem 5rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    word-spacing: 0.125rem;
+    letter-spacing: 0.0625rem;
+}
+
+.navbar-ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-ul li {
+    list-style: none;
+}
+
+.nav-link{
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 3rem;
+    text-decoration: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: #ffffff;
+    color: #495057;
+}
+
+.greeting{
+    position: absolute;
+    top: 12rem;
+    left: 5rem;
+    text-align: center;    
+}
+
+.greeting h1 {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+}
+
+.greeting h2 {
+    text-align: center;
+}
+
+#openAppointmentLink {
+    cursor: pointer;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+/*Responsive Screen views*/
+
+@media (max-width: 68.75em) {
+
+    .greeting {
+        top: 8rem;
+    }
+
+}
+
+@media (max-width: 50em) {
+
+    #banner {
+        padding-left: 2rem;
+    }
+
+    .nav-link {
+        padding: 1.5rem 2rem;
+    }
+
+    .greeting {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        left: 0;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 39em) {
+
+    #banner {
+        padding-left: 1.25rem;
+        font-size: 1.2rem;
+    }
+
+    .nav-link {
+        padding: 1.5rem 1.1rem;
+        font-size: 1.1rem;
+    }
+
+}
+
+/*Sign In form*/
+
+#signInForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 140px;
+}
+
+.signIn-form-container {
+    max-width: 400px;
+    padding: 10px;
+    height: 420px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.signIn-form-container h1 {
+    text-align: center;
+    color: #32373B;
+}
+
+.signIn-form-container label {
+    color: #32373B;
+}
+
+.signIn-form-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 4px;
+    color: #32373B;
+    background: #f1f1f1;
+}
+
+#closeSignInLink {
+    float: right;
+    width: 6%;
+    padding: 2.5px 2.5px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background-color: #32373B;
+    color: white;
+    opacity: 0.7;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+#closeSignInLink:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+.signIn-form-container .nextBtn {
+    position: relative;
+    left: 138px;
+    background-color: #32373B;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    margin-bottom:10px;
+    font-size: 17px;
+    opacity: 0.7;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.signIn-form-container .nextBtn:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+
+
+
+/*new appointment date form*/
+#editAppointmentDateForm {
+    width: 450px;
+    margin: 190px auto 0 auto;
+}
+
+
+.editAppointmentDate-form-container {
+    max-width: 450px;
+    padding: 10px;
+    height: 350px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.editAppointmentDate-form-container h1 {
+    text-align: center;
+    color: #32373B;
+}
+
+.editAppointmentDate-form-container label {
+    color: #32373B;
+}
+
+.editAppointmentDate-form-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 4px;
+    color: #32373B;
+    background: #f1f1f1;
+}
+
+.editAppointmentDate-form-container ::-moz-placeholder {
+    color:#6c757d;
+}
+
+.editAppointmentDate-form-container ::-webkit-input-placeholder {
+    color:#6c757d;
+}
+
+
+.editAppointmentDate-form-container input:invalid::-webkit-datetime-edit {
+    color:#6c757d;
+    
+}
+
+.editAppointmentDate-form-container input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.editAppointmentDate-form-container .doneBtn {
+    position: relative;
+    left: 126px;
+    background-color: #32373B;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom:10px;
+    font-size: 18px;
+    opacity: 0.7;
+    border-radius: 4px;
+}
+
+.editAppointmentDate-form-container .doneBtn:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+/*mechanic update form*/
+
+#editMechanicNameForm {
+    width: 450px;
+    margin: 190px auto 0 auto;
+}
+
+
+.editMechanicName-form-container {
+    max-width: 450px;
+    padding: 10px;
+    height: 350px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.editMechanicName-form-container h1 {
+    text-align: center;
+    color: #32373B;
+}
+
+.editMechanicName-form-container label {
+    color: #32373B;
+}
+
+.editMechanicName-form-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 4px;
+    color: #32373B;
+    background: #f1f1f1;
+}
+
+.editMechanicName-form-container input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.editMechanicName-form-container .doneBtn {
+    position: relative;
+    left: 126px;
+    background-color: #32373B;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom:10px;
+    font-size: 18px;
+    opacity: 0.7;
+    border-radius: 4px;
+}
+
+.editMechanicName-form-container .doneBtn:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+/*appointment form*/
+
+#appointmentForm {
+    width: 500px;
+    margin: 140px auto 0 auto;
+}
+
+.appointment-form-container {
+    max-width: 500px;
+    padding: 10px;
+    height: 540px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.appointment-form-container h1 {
+    text-align: center;
+    color: #32373B;
+}
+
+.appointment-form-container label {
+    color: #32373B;
+}
+
+.appointment-form-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 4px;
+    color: #32373B;
+    background: #f1f1f1;
+}
+
+#closeAppointmentLink {
+    float: right;
+    width: 5%;
+    padding: 3px 3px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background-color: #32373B;
+    color: white;
+    opacity: 0.7;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+#closeAppointmentLink:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+/*I only changed the placeholder colour for chrome and firefox*/
+/*input=date varies from browser to browser. I couldn't fix the placeholder color in date for firefox*/
+.appointment-form-container ::-moz-placeholder {
+    color:#6c757d;
+}
+
+.appointment-form-container ::-webkit-input-placeholder {
+    color:#6c757d;
+}
+
+
+.appointment-form-container input:invalid::-webkit-datetime-edit {
+    color:#6c757d;
+    
+}
+
+.appointment-form-container input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.appointment-form-container .nextBtn {
+    position: relative;
+    left: 140px;
+    background-color: #32373B;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom:10px;
+    font-size: 18px;
+    opacity: 0.7;
+    border-radius: 4px;
+}
+
+.appointment-form-container .nextBtn:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+
+/*Mechanic List form*/
+#mechanicListForm {
+    display: none;
+    width: 400px;
+    margin: 110px auto 0 auto;
+}
+
+.mechanicList-form-container {
+    max-width: 400px;
+    padding: 10px;
+    height: 500px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.mechanicList-form-container h1 {
+    text-align: center;
+    color: #32373B;
+}
+
+.mechanicList-form-container label {
+    color: #32373B;
+    font-size: 17px;
+}
+
+.mechanic-form-container input {
+    color: #32373B;   
+}
+
+#closeMechanicListLink {
+    float: right;
+    width: 6%;
+    padding: 3px 3px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background-color: #32373B;
+    color: white;
+    opacity: 0.7;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+#closeMechanicListLink:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+.mechanicList-form-container .confirmBtn {
+    position: relative;
+    left: 140px;
+    background-color: #32373B;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 25%;
+    margin-bottom:10px;
+    font-size: 17px;
+    opacity: 0.7;
+    border-radius: 4px;
+}
+
+.mechanicList-form-container .confirmBtn:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+/*Deny form*/
+#denyForm {
+    display: none;
+    width: 350px;
+    margin: 240px auto 0 auto;
+}
+
+.deny-form-container {
+    max-width: 350px;
+    padding: 10px;
+    height: 250px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.deny-form-container h1 {
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 30px;
+    color: #32373B;
+}
+
+.deny-form-container p1 {
+    font-size: 18px;
+    color: #32373B;
+    
+}
+
+#closeDenyLink{
+    float: right;
+    width: 6.5%;
+    padding: 2px 2px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background-color: #32373B;
+    color: white;
+    opacity: 0.7;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+#closeDenyLink:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+/*confirm form*/
+#confirmForm {
+    display: none;
+    width: 350px;
+    margin: 240px auto 0 auto;
+}
+
+.confirm-form-container {
+    padding: 10px;
+    height: 240px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.confirm-form-container h1 {
+    text-align: center;
+    font-family: "Playfair Display";
+    font-size: 30px;
+    color: #32373B;
+}
+
+.confirm-form-container p1 {
+    font-size: 18px;
+    color: #32373B;
+    
+}
+
+#closeConfirmLink {
+    float: right;
+    width: 6.5%;
+    padding: 2px 2px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-align: center;
+    background-color: #32373B;
+    color: white;
+    opacity: 0.7;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+}
+
+#closeConfirmLink:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+
+/*new appointment date form*/
+#editAppointmentDateForm {
+    width: 450px;
+    margin: 190px auto 0 auto;
+}
+
+
+.editAppointmentDate-form-container {
+    max-width: 450px;
+    padding: 10px;
+    height: 350px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.editAppointmentDate-form-container h1 {
+    text-align: center;
+    color: #32373B;
+}
+
+.editAppointmentDate-form-container label {
+    color: #32373B;
+}
+
+.editAppointmentDate-form-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 4px;
+    color: #32373B;
+    background: #f1f1f1;
+}
+
+.editAppointmentDate-form-container ::-moz-placeholder {
+    color:#6c757d;
+}
+
+.editAppointmentDate-form-container ::-webkit-input-placeholder {
+    color:#6c757d;
+}
+
+
+.editAppointmentDate-form-container input:invalid::-webkit-datetime-edit {
+    color:#6c757d;
+    
+}
+
+.editAppointmentDate-form-container input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.editAppointmentDate-form-container .doneBtn {
+    position: relative;
+    left: 126px;
+    background-color: #32373B;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom:10px;
+    font-size: 18px;
+    opacity: 0.7;
+    border-radius: 4px;
+}
+
+.editAppointmentDate-form-container .doneBtn:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+/*mechanic update form*/
+
+#editMechanicNameForm {
+    width: 450px;
+    margin: 190px auto 0 auto;
+}
+
+
+.editMechanicName-form-container {
+    max-width: 450px;
+    padding: 10px;
+    height: 350px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.editMechanicName-form-container h1 {
+    text-align: center;
+    color: #32373B;
+}
+
+.editMechanicName-form-container label {
+    color: #32373B;
+}
+
+.editMechanicName-form-container input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    border-radius: 4px;
+    color: #32373B;
+    background: #f1f1f1;
+}
+
+.editMechanicName-form-container input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.editMechanicName-form-container .doneBtn {
+    position: relative;
+    left: 126px;
+    background-color: #32373B;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom:10px;
+    font-size: 18px;
+    opacity: 0.7;
+    border-radius: 4px;
+}
+
+.editMechanicName-form-container .doneBtn:hover {
+    background-color: #525A61;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+
