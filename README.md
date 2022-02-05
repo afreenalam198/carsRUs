@@ -24,7 +24,7 @@ Technologies used in this project are HTML, CSS, vanilla JavaScript, PHP and myS
 
 ## Link
 
-- [Live Site URL](http://carsrus.epizy.com/?i=1)
+- [Live Site URL](http://carsrus.epizy.com)
 
 ## Screenshot
 
