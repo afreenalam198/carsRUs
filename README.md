@@ -28,4 +28,4 @@ Technologies used in this project are HTML, CSS, vanilla JavaScript, PHP and myS
 
 ## Screenshot
 
-![](./assets/img/screenshot.PNG)
+![](./img/screenshot.PNG)
